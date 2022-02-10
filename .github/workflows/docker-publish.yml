@@ -24,6 +24,9 @@ env:
 
 jobs:
   build:
+    defaults:
+      run:
+        working-directory: basic_web
 
     runs-on: ubuntu-latest
     permissions:
@@ -36,7 +39,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        working-directory: basic_web
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
       - name: Install cosign
